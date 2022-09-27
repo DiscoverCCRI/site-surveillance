@@ -1,17 +1,23 @@
-# very elementary Dockerfile running this project
+# Dockerfile running this project
 # FROM python:3.9.2
-FROM --platform=linux/arm/v7 python:3.9.2
+FROM kalilinux/kali-rolling
 
 # install updates and core dependencies for our projects dependencies
-RUN apt-get update
+RUN apt-get -y update
 RUN apt-get -y upgrade
-RUN apt-get -y install apt-utils
-RUN apt-get -y install libc-dev
-RUN apt-get -y install build-essential
-RUN apt install -y cmake g++ wget unzip
+#RUN apt -y install apt-utils
+RUN apt-get -y install apt
+
+#RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install {apt-utils}
+
+#RUN apt-get -y install libc-dev
+#RUN apt-get -y install build-essential
+#RUN apt install -y cmake g++ wget unzip
 
 # install base python img
 RUN apt-get install -y python3-dev python3-distutils python3-pip python3-apt gfortran gcc 
+# RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install {python3-dev python3-distutils python3-pip python3-apt gfortran gcc}
+
 RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install --upgrade pip
 
@@ -56,5 +62,7 @@ RUN pip3 install imutils
 
 # execute .py program
 # CMD ["python3", "../src/test_stream_v1.py"]
-CMD python3 ../src/test_stream_v1.py
+CMD python3 src/turret01.py
+CMD python3 src/turret02.py
+
 
