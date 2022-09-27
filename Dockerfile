@@ -5,7 +5,7 @@ FROM ubuntu:latest
 
 
 # install updates and core dependencies for our projects dependencies
-RUN apt-get -y update && apt-get -y install libc-dev python3-dev python3-distutils python3-pip python3-apt gfortran gcc
+RUN apt-get -y update && apt-get -y install libc-dev python3-dev python3-distutils python3-pip python3-apt gfortran gcc ngrok libgtk-3-dev python3-numpy
 #RUN apt-get -y upgrade
 #RUN apt -y install apt-utils
 
