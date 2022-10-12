@@ -115,7 +115,7 @@ $ git clone git@github.com:ZoneMinder/zmdockerfiles.git
 ```
 and simply run with docker
 ```
-docker run -d -t -p 1080:80 \
+docker run -d -t -p 8080:80 \
     -e TZ='America/Phoenix' \
     -v ~/zoneminder/events:/var/cache/zoneminder/events \
     -v ~/zoneminder/images:/var/cache/zoneminder/images \
