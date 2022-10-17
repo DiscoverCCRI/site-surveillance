@@ -21,7 +21,6 @@ $ sudo chmod 666 /var/run/docker.sock
 ```
 confirm installation by checking version and running hello world container 
 
-
 # Build this project
 ---
 enter the zmdockerfiles directory and run:
@@ -36,7 +35,7 @@ docker run -d -t -p 8080:80 \
     --name zoneminder \
     zoneminderhq/zoneminder:latest-ubuntu18.04
 ```
-The application will now be viewable at http://localhost:1080/zm/
+The application will now be viewable at http://localhost:8080/zm/
 
 ```
 $ docker --version
@@ -53,7 +52,8 @@ add your authtoken to the ngrok agent as well as add your API-key to the ngrok c
 ```
 $ ngrok config add-authtoken <authtoken>
 ``` 
-- after setting up ngrok open up port 5000 to forward publicly 
+- after setting up ngrok open up port 8080 to forward publicly 
+- run the reverse_proxy.py script
 ```
 $ ngrok http 5000
 ``` 
