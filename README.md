@@ -3,6 +3,13 @@
 Using zoneminder to monitor the Discover CCRI test site with multiple
 RTSP based IP cameras. 
 
+# Zoneminder Overview
+ZoneMinder is an integrated set of applications which provide a complete surveillance 
+solution allowing capture, analysis, recording and monitoring of any CCTV or security 
+cameras attached to a Linux based machine. It is designed to run on distributions which 
+support the Video For Linux (V4L) interface and has been tested with video cameras 
+attached to BTTV cards, various USB cameras and also supports most IP network cameras.
+
 ### Minimal dependencies
 **Fetch updates**
 ```
