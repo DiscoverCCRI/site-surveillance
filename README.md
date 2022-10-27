@@ -65,5 +65,5 @@ $ ngrok config add-authtoken <authtoken>
 $ ngrok http 5000
 ``` 
 this will open an ngrok session and provide you with the generated public facing
-URL of your project.
+URL of your project. The url will be viewable at <generated_URL>/zm.
 
