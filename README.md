@@ -68,7 +68,7 @@ $ ngrok http 8080
 $ screen -d -m ngrok 8080
 
 # view generated sessions 
-$curl http://127.0.0.1:4040/api/tunnels
+$ curl http://127.0.0.1:4040/api/tunnels
 ``` 
 this will open an ngrok session and provide you with the generated public facing
 URL of your project. The url will be viewable at <generated_URL>/zm.
