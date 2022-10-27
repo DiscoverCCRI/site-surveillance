@@ -62,7 +62,13 @@ $ ngrok config add-authtoken <authtoken>
 - after setting up ngrok open up port 8080 to forward publicly 
 - run the reverse_proxy.py script
 ```
-$ ngrok http 5000
+$ ngrok http 8080
+
+# to run in the background
+$ screen -d -m ngrok 8080
+
+# view generated sessions 
+$curl http://127.0.0.1:4040/api/tunnels
 ``` 
 this will open an ngrok session and provide you with the generated public facing
 URL of your project. The url will be viewable at <generated_URL>/zm.
